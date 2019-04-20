@@ -1,5 +1,7 @@
 {
   "name": "oh-my-weight",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
