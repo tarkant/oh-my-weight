@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-button (click)="onRefresh()">Refresh</ion-button>
+</ion-item>
+<ion-item *ngFor="let item of weights">
+  <ion-label>{{ item.date | date }} </ion-label> {{ item.weight }}
+</ion-item>

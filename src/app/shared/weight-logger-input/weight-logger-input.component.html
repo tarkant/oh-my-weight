@@ -1,0 +1,12 @@
+<ion-item>
+  <ion-label>Weight</ion-label>
+  <ion-input type="number" placeholder="Weight in Kg" required [(ngModel)]="inputWeight"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Date</ion-label>
+  <ion-datetime display-format="DD/MM/YYYY at HH:mm" picker-format="YYYY-MM-DDTHH:mm" [ngModel]="inputDate">
+  </ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-button (click)="saveWeight()">Save !</ion-button>
+</ion-item>

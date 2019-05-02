@@ -10,13 +10,9 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
     <h1>Log a new weight entry...</h1>
-    <ion-item>
-      <ion-label>Weight</ion-label>
-      <ion-input type="number" placeholder="Weight in Kg" required [ngModel]="inputWeight"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Date</ion-label>
-      <ion-datetime display-format="DD/MM/YYYY at HH:mm" picker-format="YYYY-MM-DDTHH:mm" [ngModel]="inputDate"></ion-datetime>
-    </ion-item>
+  </ion-item>
+  <app-weight-logger-input></app-weight-logger-input>
+  <app-weight-display-table></app-weight-display-table>
 </ion-content>
