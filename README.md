@@ -17,3 +17,14 @@ A simple personal project based on Ionic and that is not a todo app. I've checke
 # Contribute
 
 You can contribute, fork or do whatever you like. You can also submit issues and give me feedback so I can improve myself because I'm sure of only one thing: "A day is wasted if we don't learn a new thing".
+
+## How to get started?
+
+You'll have to install ionic if it's not already the case. You can check [the instructions over here](https://ccoenraets.github.io/ionic-tutorial/install-ionic.html).
+Once ionic & cordova installed, you can start the developement server with `npm start`.
+
+You might encounter an error with SASS loading, if it's the case, start by installing **node-sass** as following :
+
+`sudo npm install --save-dev`
+
+Then you can run `npm start` and you'll be greeted with the dev server.
