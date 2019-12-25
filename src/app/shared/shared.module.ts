@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { WeightLoggerInputComponent } from './components/weight-logger-input/weight-logger-input.component';
@@ -12,6 +12,7 @@ import { WeightDisplayTableComponent } from './components/weight-display-table/w
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     CommonModule,
   ],

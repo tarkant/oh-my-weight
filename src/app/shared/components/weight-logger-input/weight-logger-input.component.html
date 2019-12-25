@@ -1,12 +1,14 @@
+<form (submit)="saveWeight()" [formGroup]="weightLoggerForm">
 <ion-item>
   <ion-label>Weight</ion-label>
-  <ion-input type="number" placeholder="Weight in Kg" required [(ngModel)]="inputWeight"></ion-input>
+  <ion-input type="number" placeholder="Weight in Kg" formControlName="weightInput"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label>Date</ion-label>
-  <ion-datetime display-format="DD/MM/YYYY at HH:mm" picker-format="YYYY-MM-DDTHH:mm" [ngModel]="inputDate">
+  <ion-datetime display-format="DD/MM/YYYY at HH:mm" picker-format="YYYY-MM-DDTHH:mm" formControlName="weightLogDate">
   </ion-datetime>
 </ion-item>
 <ion-item>
-  <ion-button (click)="saveWeight()">Save !</ion-button>
+  <ion-button type="submit" [disabled]="weightLoggerForm.invalid">Save</ion-button>
 </ion-item>
+</form>
