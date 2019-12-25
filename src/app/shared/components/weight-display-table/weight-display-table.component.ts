@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { WeightEntry } from 'src/app/models/weight-entry.model';
+import { Observable } from 'rxjs';
+import { WeightsDataService } from '../../services/weights-data.service';
 
 @Component({
   selector: 'app-weight-display-table',
@@ -9,18 +11,14 @@ import { WeightEntry } from 'src/app/models/weight-entry.model';
 })
 export class WeightDisplayTableComponent implements OnInit {
 
-  public weights: Array<WeightEntry>;
+  public weights: Observable<WeightEntry[]>;
 
   constructor(
-    private storage: Storage
+    private dataService: WeightsDataService,
   ) { }
 
-  ngOnInit() {
-    this.onRefresh();
-  }
-
-  public onRefresh() {
-    this.storage.get('weights').then(arr => this.weights = arr || []);
+  public ngOnInit() {
+    this.weights = this.dataService.getWeightsAsObservable();
   }
 
 }

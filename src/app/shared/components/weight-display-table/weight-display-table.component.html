@@ -1,0 +1,3 @@
+<ion-item *ngFor="let item of weights | async">
+  <ion-label>{{ item.date | date }} </ion-label> {{ item.weight }}
+</ion-item>
