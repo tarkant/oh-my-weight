@@ -40,8 +40,7 @@ export class WeightsDataService {
         weight: value,
         date: date.toISOString(),
       });
-      this.storage.set('weights', weights);
-      this.pushDataChanges();
+      this.storage.set('weights', weights).then(() => this.pushDataChanges());
     });
   }
 

@@ -11,10 +11,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class WeightLoggerInputComponent implements OnInit {
 
-  public weightEntry: WeightEntry;
-  public inputWeight: number;
-  public inputDate = new Date(Date.now()).toISOString();
-
   public weightLoggerForm: FormGroup;
 
   constructor(
@@ -29,7 +25,10 @@ export class WeightLoggerInputComponent implements OnInit {
   }
 
   public saveWeight(): void {
-    this.dataService.saveWeight(this.inputWeight, new Date(this.inputDate));
+    this.dataService.saveWeight(
+      this.weightLoggerForm.controls['weightInput'].value,
+      new Date(this.weightLoggerForm.controls['weightLogDate'].value)
+    );
   }
 
 }
